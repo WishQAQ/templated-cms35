@@ -1,0 +1,29 @@
+<div id="container">
+<header>
+  <hgroup>
+    <h2 id="logo"><a href="/" title="{dede:global.cfg_seotitle/}">{dede:global.cfg_webname/}</a> </h2>
+    <div id="tops">
+      <div class="tmenu"><a href="{dede:global.cfg_cmsurl/}/sitemap.xml" target="_blank">xml</a>|<a href="{dede:global.cfg_cmsurl/}/data/sitemap.html">sitemap</a>|<a href="{dede:global.cfg_cmsurl/}/tags.php">tags</a>|<a href="{dede:global.cfg_dataurl/}/rssmap.html" class="rss">rss</a></div>
+      <div class="tsearch">
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+          <input type="hidden" name="kwtype" value="0" />
+          <input name="q" type="text" class="ipts" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+          <button type="submit" class="btns">搜索</button>
+        </form>
+      </div>
+      <div class="h">热门搜索：<a href="{dede:global.cfg_cmsurl/}/"><strong>镇江学美甲</strong></a>,<a href="{dede:global.cfg_cmsurl/}/"><strong>镇江化妆培训</strong></a>,<a href="{dede:global.cfg_cmsurl/}/"><strong>镇江学化妆</strong></a>,<a href="{dede:global.cfg_cmsurl/}/"><strong>镇江化妆学校</strong></a></div>
+    </div>
+  </hgroup>
+  <nav>
+    <ul>
+      <li class="hover"><a href='/'>网站首页</a></li>
+      {dede:channel type='top' row='10'}
+      <li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+  </nav>
+</header>
+<div id="slides">
+  <div class="slides_container"> <a href="{dede:global.cfg_cmsurl/}/"><img src="{dede:global.cfg_templets_skin/}/images/banner1.jpg" alt="镇江学化妆"/></a> <a href="{dede:global.cfg_cmsurl/}/"><img src="{dede:global.cfg_templets_skin/}/images/banner2.jpg" alt="镇江学美甲"/></a> <a href="{dede:global.cfg_cmsurl/}/"><img src="{dede:global.cfg_templets_skin/}/images/banner3.jpg" alt="镇江化妆培训"/></a> <a href="{dede:global.cfg_cmsurl/}/"><img src="{dede:global.cfg_templets_skin/}/images/banner4.jpg" alt="镇江化妆学校"/></a> </div>
+  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={dede:global.cfg_qq/}&site=qq&menu=yes" class="chat" title="在线咨询">QQ:{dede:global.cfg_qq/}</a> </div>
+<div id="content">

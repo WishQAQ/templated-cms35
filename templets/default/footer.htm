@@ -1,0 +1,22 @@
+</div>
+
+<footer>
+  <hgroup>
+    <nav>
+      <ul>
+        {dede:channelartlist typeid='top' row='5'}
+        <li><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+          <ul>
+            {dede:channel type='son' noself='yes'}
+            <li><a href="[field:typelink/]">[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </li>
+        {/dede:channelartlist}
+        <li class="lt"><a href="/a/lianxiwomen/">联系我们</a> {dede:global.cfg_leftcontact/} </li>
+      </ul>
+    </nav>
+    <div class="copyright">{dede:global.cfg_footer/}</div>
+  </hgroup>
+</footer>
+</div>

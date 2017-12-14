@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+{dede:include filename="style.htm"/}
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="right">
+    <div id="location">
+        <ul id="category">
+            <li><a href='{dede:global.cfg_cmsurl/}/data/sitemap.html'>网站地图</a></li>
+            <li><a href='{dede:global.cfg_cmsurl/}/data/rssmap.html'>RSS订阅</a></li>
+            <li><a href='{dede:global.cfg_cmsurl/}/tags.php' class='thisclass'>TAG标签</a></li>
+        </ul>
+        <div id="crumbs"><a href="{dede:global.cfg_cmsurl/}/">首页</a> &gt; <a href='tags.php'>TAG标签</a> &gt; {dede:field.title /}</div>
+    </div>
+    <ul class="alist">
+        {dede:list orderby='sortrank' pagesize='10'}
+        <li><span> [field:pubdate function="GetDateMK(@me)"/] </span> <a href="[field:arcurl/]" class="title">[field:title/]</a> </li>
+        {/dede:list}
+    </ul>
+    <ul class="pages">
+        {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+    </ul>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

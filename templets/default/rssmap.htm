@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>RSS订阅 - {dede:global name='cfg_webname'/}</title>
+{dede:include filename="style.htm"/}
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="right">
+    <div id="location">
+		<ul id="category">
+            <li><a href='{dede:global.cfg_cmsurl/}/data/sitemap.html'>网站地图</a></li>
+			<li><a href='{dede:global.cfg_cmsurl/}/data/rssmap.html' class='thisclass'>RSS订阅</a></li>
+			<li><a href='{dede:global.cfg_cmsurl/}/tags.php'>TAG标签</a></li>
+        </ul>
+        <div id="crumbs">当前位置：<a href="{dede:global.cfg_cmsurl/}/">首页</a> &gt; RSS订阅</div>
+    </div>
+	{dede:global name='maplist'/}
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_seotitle/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+{dede:include filename="style.htm"/}
+</head>
+<body id="default">
+{dede:include filename="head_index.htm"/}
+<div class="overview clearfix">
+  <div class="l"><a href="/a/guanyumeiyuan/shizililiang" title="美源培训中心校长-王娟"><img src="{dede:global.cfg_templets_skin/}/images/b.jpg" alt="镇江学美甲,镇江学化妆,镇江化妆学校,镇江化妆培训" /></a></div>
+  <div class="m">
+    <h2>美源彩妆美甲培训中心</h2>
+    {dede:global.cfg_overview/}
+    <ul class="amenu">
+      {dede:channel type='son' typeid='1'}
+      <li><a href='[field:typeurl/]' title="[field:typename/]">[+[field:typename/]]</a></li>
+      {/dede:channel}
+    </ul>
+    <ul class="alist clearfix">
+      {dede:arclist titlelen='220' typeid='20' row='3'}
+      <li><span>[field:pubdate function="GetDateMK(@me)"/]</span><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></li>
+      {/dede:arclist}
+    </ul>
+    <ul class="amenu">
+      {dede:channel type='son' typeid='18'}
+      <li><a href='[field:typeurl/]' title="[field:typename/]">[+[field:typename/]]</a></li>
+      {/dede:channel}
+    </ul>
+  </div>
+  <div class="r">
+    <ul class="smenu">
+      {dede:channel type='son' typeid='7'}
+      <li>
+        <h3><a href='[field:typeurl/]' title="[field:typename/]">[field:typename/]</a></h3>
+        <a href='[field:typeurl/]' rel="nofollow">[+查看详细]</a></li>
+      {/dede:channel}
+    </ul>
+  </div>
+</div>
+<div class="pros">
+  <h2>镇江学化妆</h2>
+  {dede:channelartlist typeid='31'}
+  <div class="pro">
+    <div class="tone"> {dede:arclist titlelen='220' row='1' flag='h'} <a href="[field:arcurl /]" title="[field:title/]">[field:image/]</a> {/dede:arclist} </div>
+    <ul class="clearfix">
+      {dede:arclist titlelen='220' row='3' noflag='h'}
+      <li><a href="[field:arcurl /]" title="[field:title/]">[field:image /]</a></li>
+      {/dede:arclist}
+    </ul>
+    <h3><a href="{dede:field name='typeurl'/}">更多{dede:field name='typename'/}<span>&gt;&gt;</span></a></h3>
+  </div>
+  {/dede:channelartlist} </div>
+<div class="news clearfix">
+  <div class="l"> {dede:arclist row=1 flag='h' titlelen='220' typeid='25'} <a href="[field:arcurl/]" title="[field:title/]">[field:image/]</a> {/dede:arclist} </div>
+  <div class="m">
+    <div class="one"> {dede:arclist row=1 flag='h' titlelen='220' infolen='230' typeid='25'}
+      <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+      <p>[field:info/]...<a href="[field:arcurl/]" rel="nofollow">[+查看全文]</a></p>
+      {/dede:arclist}
+      <ul class="clearfix">
+        {dede:arclist titlelen='220' row='3' noflag='h' typeid='25'}
+        <li><span>[field:pubdate function="GetDateMK(@me)"/]</span><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    {dede:channelartlist typeid='27,28,29,30'}
+    <div class="n">
+      <h3><a href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">{dede:field name='typename'/}</a></h3>
+      <div class="tone"> 
+      {dede:arclist titlelen='' row='1' flag='c'   imgwidth='120'   imgheight='120'}
+        <div class="img"><a href="[field:typeurl/]" title="[field:typename/]">[field:image/]</a></div>
+        {/dede:arclist} 
+        </div>
+      <ul class="clearfix">
+        {dede:arclist titlelen='220' row='4' noflag='c'}
+        <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+        {/dede:arclist}
+      </ul>
+      <a href="{dede:field name='typeurl'/}" rel="nofollow" class="more">more+</a> </div>
+    {/dede:channelartlist} 
+    </div>
+</div>
+{dede:include filename="footer.htm"/}
+<ul id="flinks">
+  <li>合作伙伴：</li>
+  {dede:flink row='200' type='text' titlelen="24" typeid="0"}
+  <li>[field:link /]</li>
+  {/dede:flink}
+</ul>
+<script src="{dede:global.cfg_templets_skin/}/js/slides.min.jquery.js"></script> 
+<script src="{dede:global.cfg_templets_skin/}/js/all.js"></script>
+</body>
+</html>

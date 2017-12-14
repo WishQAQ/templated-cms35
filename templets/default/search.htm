@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>搜索页 - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+{dede:include filename="style.htm"/}
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="right">
+    <div id="location"><ul id="category"><li>搜索 <strong>{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果</li></ul>
+        <div id="crumbs">当前位置：<a href='/'>首页</a> &gt; 搜索页</div>
+    </div>
+	
+    <ul class="alist">
+        {dede:list perpage='20'}
+        <li> <a href="[field:typeurl/]" target="_blank">[field:typename/]</a><a href="[field:arcurl/]" target="_blank">[field:title/]</a> </li>
+        {/dede:list}
+    </ul>
+    <ul class="pages">
+        {dede:pagelist listsize='4'/}
+    </ul>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

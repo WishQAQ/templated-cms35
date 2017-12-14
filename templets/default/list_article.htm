@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:field.typename/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+{dede:include filename="style.htm"/}
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="right">
+    <div id="location">
+        <ul id="category">
+            {dede:channel type='son' currentstyle="
+            <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
+            "}
+            <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+        <div id="crumbs">当前位置：{dede:field name='position'/}</div>
+    </div>
+    <ul class="alist2">
+        {dede:list pagesize='10'}
+        <li>[field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='img'><img src='{@me['litpic']}' alt='{@me['title']}'/></a>"); [/field:array]
+            <h2><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+            <p class="intro"> [field:description/]... <br/><a href="[field:arcurl/]" title="[field:title/]">[+查看详细]</a></p>
+            <p class="in">DATE:[field:pubdate function="GetDateMK(@me)"/]</p>
+        </li>
+        {/dede:list}
+    </ul>
+    <ul class="pages">
+        {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+    </ul>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

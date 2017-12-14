@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>TAG标签 - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+{dede:include filename="style.htm"/}
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="right">
+    <div id="location">
+        <ul id="category">
+            <li><a href='{dede:global.cfg_cmsurl/}/data/sitemap.html'>网站地图</a></li>
+            <li><a href='{dede:global.cfg_cmsurl/}/data/rssmap.html'>RSS订阅</a></li>
+            <li><a href='{dede:global.cfg_cmsurl/}/tags.php' class='thisclass'>TAG标签</a></li>
+        </ul>
+        <div id="crumbs">当前位置：<a href="{dede:global.cfg_cmsurl/}/">首页</a> &gt; TAG标签</div>
+    </div>
+    <ul class="taglist clearfix">
+        {dede:tag row='100' sort='rand'}
+            <li><a href='[field:link/]'>[field:tag /]</a></li>
+            {/dede:tag}
+    </ul>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

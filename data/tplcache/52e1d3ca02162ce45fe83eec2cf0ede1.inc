@@ -1,0 +1,1 @@
+<div class="img"><a href="[field:typeurl/]" title="[field:typename/]">[field:image/]</a></div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:field.typename/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+{dede:include filename="style.htm"/}
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="right">
+    <div id="location">
+        <ul id="category">
+            {dede:channel type='son' currentstyle="
+            <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
+            "}
+            <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+        <div id="crumbs">当前位置：{dede:field name='position'/}</div>
+    </div>
+    <article class='inpage{dede:field.typeid/}'>{dede:field.content/}</article>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

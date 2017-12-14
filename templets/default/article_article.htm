@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+{dede:include filename="style.htm"/}
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="right">
+  <div id="location">
+    <ul id="category">
+      {dede:channel type='son' currentstyle="
+      <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
+      "}
+      <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+    <div id="crumbs">当前位置：{dede:field name='position'/}</div>
+  </div>
+  <article>
+    <h1>{dede:field.title/}</h1>
+    <div class="i">
+      <div id="bdshare" class="bdshare_b" style="line-height: 12px; float: right;"><img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831" /></div>
+      发布日期：{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}<span>|</span>文章类别：{dede:field.typename/}</div>
+    {dede:field.body/}
+    <div class="the_article_link">原文链接：<a href="{dede:field name='arcurl' /}" title="{dede:field.title/}">{dede:field name='arcurl' /}</a>，转载请注明出处。</div>
+    <div class="the_article_tags">标签：<a href='{dede:global.cfg_cmsurl/}/'><strong>镇江化妆培训</strong></a>,<a href='{dede:global.cfg_cmsurl/}/'><strong>镇江学美甲</strong></a>,<a href='{dede:global.cfg_cmsurl/}/'><strong>镇江化妆学校</strong></a>,<a href='{dede:global.cfg_cmsurl/}/'><strong>镇江学化妆</strong></a>{dede:tag row='10' sort='new' getall='0'} <a href='[field:link/]'>[field:tag /]</a>{/dede:tag}</div>
+  </article>
+  <ul class="article_prev_next">
+    <li class="prev">{dede:prenext get='pre'/}</li>
+    <li class="next">{dede:prenext get='next'/}</li>
+  </ul>
+  <div class="related">
+    <h2>相关文章</h2>
+    <ul class="clearfix">
+      {dede:arclist row='10' orderby='rand' titlelen='200' }
+      <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</div>
+{dede:include filename="footer.htm"/} 
+<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=0" ></script> 
+<script type="text/javascript" id="bdshell_js"></script> 
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+</body>
+</html>
